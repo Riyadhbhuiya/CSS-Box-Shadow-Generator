@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Grids and Flexbox</title>
+        <link rel="stylesheet" href="styles.css" />
+    </head>
+    <body>
+        <!-- <section class="grid"></section> -->
+
+        <section class="container">
+            <div class="sliders">
+                <h3>Box shadow options</h3>
+                <label for="horizontal" id="hlabel">Horizontal Shadow</label>
+                <input
+                    type="range"
+                    name="Horizontal Shadow: 0px"
+                    id="horizontal"
+                    min="-200"
+                    max="200"
+                    value="0"
+                    oninput="cssUpdate()"
+                />
+                <label for="vertical" id="vlabel">Vertical Shadow</label>
+                <input
+                    type="range"
+                    name="Vertical Shadow: 0px"
+                    id="vertical"
+                    min="-200"
+                    max="200"
+                    value="0"
+                    oninput="cssUpdate()"
+                />
+                <label for="blur" id="blurlabel">Blur Radius</label>
+                <input
+                    type="range"
+                    name="Blur Radius: 0px"
+                    id="blur"
+                    min="0"
+                    max="400"
+                    value="0"
+                    oninput="cssUpdate()"
+                />
+                <label for="spread" id="slabel">Spread Radius</label>
+                <input
+                    type="range"
+                    name="Spread Radius: 0px"
+                    id="spread"
+                    min="-200"
+                    max="200"
+                    value="0"
+                    oninput="cssUpdate()"
+                />
+                <label for="color" id="clabel">Shadow Color: #000000</label>
+                <input
+                    type="color"
+                    id="color"
+                    name="Shadow Color"
+                    value="#000000"
+                    oninput="cssUpdate()"
+                />
+
+                <label for="opacity" id="olabel">Shadow Color Opacity</label>
+                <input
+                    type="range"
+                    name="Shadow Color Opacity"
+                    id="opacity"
+                    min="0"
+                    max="255"
+                    value="255"
+                    oninput="cssUpdate()"
+                />
+            </div>
+            <div class="output">
+                <div class="half box">
+                    <div id="showcase"></div>
+                </div>
+                <div class="half css">
+                    <p id="css">box-shadow: 0px 5px 5px 0px #000000ff;</p>
+                </div>
+            </div>
+        </section>
+
+        <script src="app.js"></script>
+    </body>
+</html>
